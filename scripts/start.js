@@ -9,7 +9,7 @@ const scriptPkg = require(`${scriptVersion}/package.json`);
 // CRA 2.1.2 switched to using a webpack config factory
 // https://github.com/facebook/create-react-app/pull/5722
 // https://github.com/facebook/create-react-app/releases/tag/v2.1.2
-const isWebpackFactory = semver.gte(scriptPkg && scriptPkg.version, '2.1.2');
+const isWebpackFactory = true; // we will use this for cordova-react-scripts
 
 const webpackConfigPath = `${scriptVersion}/config/webpack.config${!isWebpackFactory ? '.dev' : ''}`;
 const devServerConfigPath = `${scriptVersion}/config/webpackDevServer.config.js`;
